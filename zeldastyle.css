@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    overflow: hidden
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+canvas {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    flex-shrink: 0
+}
+
+#pad {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 140px;
+    z-index: 10;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    background: linear-gradient(transparent, rgba(0, 0, 0, .9) 12%)
+}
+
+.dpad {
+    position: absolute;
+    left: 12px;
+    bottom: 10px;
+    width: 120px;
+    height: 120px
+}
+
+.dpad b {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 255, .13);
+    border: 2px solid rgba(255, 255, 255, .22);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: rgba(255, 255, 255, .65)
+}
+
+.dpad b:active, .dpad b.act {
+    background: rgba(255, 255, 255, .4)
+}
+
+.dpad .du {
+    left: 41px;
+    top: 0
+}
+
+.dpad .dd {
+    left: 41px;
+    bottom: 0
+}
+
+.dpad .dl {
+    left: 0;
+    top: 41px
+}
+
+.dpad .dr {
+    right: 0;
+    top: 41px
+}
+
+.btns {
+    position: absolute;
+    right: 12px;
+    bottom: 30px
+}
+
+.btns b {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, .13);
+    border: 2px solid rgba(255, 255, 255, .22);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 14px;
+    font-family: monospace;
+    font-weight: bold;
+    color: rgba(255, 255, 255, .65);
+    margin-left: 8px
+}
+
+.btns b:active, .btns b.act {
+    background: rgba(255, 255, 255, .4)
+}
+
+.mbar {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px
+}
+
+.mbar b {
+    display: inline-block;
+    width: 42px;
+    height: 22px;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 12px;
+    text-align: center;
+    line-height: 22px;
+    font-size: 8px;
+    font-family: monospace;
+    color: rgba(255, 255, 255, .4)
+}
+
+.mbar b:active, .mbar b.act {
+    background: rgba(255, 255, 255, .3)
+}
+
+@media (pointer: coarse),(max-width: 600px) {
+    #pad {
+        display: block
+    }
+}

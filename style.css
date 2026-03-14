@@ -42,6 +42,16 @@ h1 {
     font-weight: bold;
 }
 
+.btn-zelda {
+    display: inline-block;
+    background-color: #3363d3;
+    color: #f1cf1d;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
 .goon-img {
     max-width: 100%;
     height: auto;

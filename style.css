@@ -17,6 +17,11 @@ body {
     align-items: center;
 }
 
+.dark-hr {
+    background-color: hsl(214.69, 50.79%, 24.71%);
+    height: 30px
+}
+
 h1 {
     font-size: 3rem;
     color: hsl(214.69, 50.79%, 24.71%);
@@ -87,4 +92,9 @@ h1 {
 
 .btn-zelda:hover {
     background-color: hsl(222, 65%, 61%);
+}
+
+.image {
+    height: 50%;
+    width: 50%;
 }

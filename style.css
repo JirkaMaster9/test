@@ -1,100 +1,195 @@
 body {
-     background-color: hsl(214.69, 50.79%, 24.71%);
-     background-color: hsl(209.71, 55.68%, 63.73%);
-     background-color: hsl(156, 23.81%, 91.76%);
-     background-color: hsl(0,0%, 100%);
-     font-family: 'Arial', sans-serif;
-     text-align: center;
-     margin: 0;
-     padding: 0;
-
- }
-
-.logo-container {
-    background-color: hsl(0,0%, 100%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(156, 23.81%, 91.76%);
+    color: hsl(214.69, 50.79%, 24.71%);
+    overflow-x: hidden;
 }
 
 .dark-hr {
     background-color: hsl(214.69, 50.79%, 24.71%);
-    height: 30px
+    height: 10px;
+    border: none;
+    margin: 0;
 }
 
-h1 {
-    font-size: 3rem;
-    color: hsl(214.69, 50.79%, 24.71%);
-    text-transform: uppercase;
-    margin-bottom: 10px;
+header {
+    background-color: hsl(0, 0%, 100%);
 }
 
-.text {
-    color: #5865F2;
-    text-align: center;
-    font-size: 1.2rem;
+.hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("img.png");
+    background-size: cover;
+    background-position: center 40%;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 60vh;
+    min-height: 400px;
+}
+
+.hero-section h1 {
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    margin: 0;
+    color: white;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    margin-top: 10px;
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.main-buttons, .games-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.main-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.games-section h3 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+}
+
+.game-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn-content, .btn-mc, .btn-diablo, .btn-zelda, .btn-doom, .btn-prince, .btn-pokemon {
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    white-space: nowrap;
 }
 
 .btn-content {
-    display: inline-block;
-    background-color: hsl(222, 65%, 51%);
-    color: hsl(0, 0%, 100%);
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
+    background-color: hsl(209.71, 55.68%, 63.73%);
+    color: white;
 }
 
-
-
 .btn-content:hover {
-    background-color: hsl(222, 65%, 61%);
+    background-color: hsl(214.69, 50.79%, 24.71%);
 }
 
 .btn-mc {
-    display: inline-block;
-    background-color: hsl(125, 70%, 54%);
-    color: hsl(0, 0%, 100%);
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
+    background-color: #4CAF50;
+    color: white;
 }
 
 .btn-mc:hover {
-    background-color: hsl(125, 70%, 64%);
+    background-color: #45a049;
 }
 
 .btn-diablo {
-    display: inline-block;
-    background-color: hsl(0, 0%, 0%);
-    color: hsl(0, 100%, 50%);
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
+    background-color: #1a1a1a;
+    color: #ff3e3e;
 }
 
 .btn-diablo:hover {
-    background-color: hsl(0, 0%, 10%);
-    color: hsl(0, 100%, 60%);
+    background-color: #333131;
 }
 
 .btn-zelda {
-    display: inline-block;
-    background-color: hsl(222, 65%, 51%);
-    color: hsl(50, 88%, 53%);
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
+    background-color: hsl(209.71, 55.68%, 63.73%);
+    color: #ffd700;
 }
 
 .btn-zelda:hover {
-    background-color: hsl(222, 65%, 61%);
+    background-color: hsl(214.69, 50.79%, 24.71%);
+}
+
+.btn-doom {
+    background-color: hsl(28, 84%, 46%);
+    color: #000000;
+}
+
+.btn-doom:hover {
+    background-color: hsl(28, 84%, 56%);
+}
+
+.btn-prince {
+    background-color: hsl(213, 16%, 23%);
+    color: #f1cf1d;
+}
+
+.btn-prince:hover {
+    background-color: hsl(213, 16%, 33%);
+}
+
+.btn-pokemon {
+    background-color: hsl(211, 68%, 38%);
+    color: #ff3e3e;
+}
+
+.btn-pokemon:hover {
+    background-color: hsl(211, 68%, 48%);
+}
+
+.welcome-image img {
+    width: auto;
+    max-width: 800px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+footer {
+    padding: 30px;
+    background-color: hsl(214.69, 50.79%, 24.71%);
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .image {
-    height: 50%;
-    width: 50%;
+    max-width: 200px;
+    max-height: 257px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.box {
+    flex: 1 1 200px;
+    background: lightblue;
+    padding: 20px;
+    text-align: center;
 }
